@@ -1,40 +1,76 @@
 <!DOCTYPE html>
-<html>
-<title>WELCOME TO Nero Tv!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script async src="f0a6f.txt" crossorigin="anonymous"></script>
+   <h1> <img src="https://i.ibb.co/74gbLHY/NXB-IPTV-12-9-2024-1.gif" width="200" height="16 </h1>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.55">
+    <title>NERO TV</title>
+    <script async src="f0a6f.txt" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com/"></script>
     <script src="jwpsrv.js"></script>
     <script src="jwplayer.js"></script>
     <script src="channels.js"></script>
     
     <link href="all.min.css" rel="stylesheet">
+   <body class="bg-black text-white min-h-screen flex flex-col">
+   
+</head> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large"
   onclick="w3_close()">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button"><div class="mb-6 w-1/4 max-w-4xl mx-auto">
-        <select id="channelSelect" class="w-1/4 p-6 bg-gray-800 text-white rounded">
+  <a href="#" class="w3-bar-item w3-button"><div class="mb-6 w-full max-w-4xl mx-auto">
+        <select id="channelSelect" class="w-full p-6 bg-gray-800 text-white rounded">
           <option value="2">
    TAP HERE TO SELECT CHANNEL</option>
                 <!-- Channel options will be populated dynamically -->
         </select>
-   </a>
+  </a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
 <div id="main">
 <div class="w3-teal">
-<button id="openNav" class="w3-button w3-white w3-xlarge" onclick="w3_open()">&#9776;</button>📚MENU
+<button id="openNav" class="w3-button w3-white w3-xlarge" onclick="w3_open()">&#9776;</button>MENU
   <div class="w3-container">
     
   </div>
-  <main class="flex-grow p-4">
+  
+  
+  
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+    
+
+    <main class="flex-grow p-4">
         <div class="w-full max-w-4xl mx-auto bg-black-800 rounded-lg shadow-lg overflow-show mb-4">
                        <div id="player" <p style="background-image: url('https://i.gifer.com/B798.gif');" class="w-16:9 aspect-video rounded"></div>
         
         
-  </main>
-  <script>
+    </main>
+
+    <script>
         jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
         function loadStream(channelKey) {
             const channel = channels[channelKey];
@@ -86,22 +122,7 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  
-</div>
-
-<script>
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("mySidebar").style.width = "25%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
-}
-</script>
-
 </body>
+
+
 </html>
