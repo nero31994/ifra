@@ -29,9 +29,59 @@
                        <div id="player" <p style="background-image: url('https://i.gifer.com/B798.gif');" class="w-16:9 aspect-video rounded"></div>
         
         
-    </main>
+  </main>
+  <script>
+        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+        function loadStream(channelKey) {
+            const channel = channels[channelKey];
+            if (!channel) return;
+            jwplayer("player").setup({
+                file: channel.url,
+                type: channel.type,
+                drm: channel.type === 'mpd' ? {
+                    clearkey: {
+                        keyId: channel.keyId,
+                        key: channel.key
+                    }
+                } : undefined,
+                width: "100%",
+                aspectratio: "32:18",
+                autostart: true
+            });
+        }
+        function positionChannelSelect() {
+            const select = document.getElementById('channelSelect');
+            Object.keys(channels).forEach(key => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = channels[key].name;
+                select.appendChild(option);
+            });
+        }
+        window.onload = function() {
+            positionChannelSelect();
+            
+            const channelSelect = document.getElementById('channelSelect');
+            channelSelect.addEventListener('change', function() {
+                loadStream(this.value);
+            });
 
-  
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const slideMenu = document.getElementById('slideMenu');
+
+            menuToggle.addEventListener('click', () => {
+                slideMenu.classList.remove('translate-x-full');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                slideMenu.classList.add('translate-x-full');
+            });
+        };
+    </script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   
 </div>
 
